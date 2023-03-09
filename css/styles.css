@@ -428,11 +428,50 @@ img {
 .card:hover {
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+.card-thumb {
+	position: relative;
+	overflow: hidden;
+}
+.card-thumb::before,
+.card-overlay {
+	position: absolute;
+	opacity: 0;
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transform: translateY(300px);
+}
+.card-thumb::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	background-color: var(--primary-brand);
+
+	top: 0;
+	left: 0;
+	
+}
+.card-thumb:hover::before,
+.card-tumb:focus::before,
+.card-thumb:hover .card-overlay,
+.card-thumb:hover .card-overlay {
+	opacity: 1;
+	transform: translateY(0);
+}
+.card-overlay {
+	min-width: 296px;
+	min-height: 96px;
+	color: var(--light);
+
+	top: 40px;
+	left: 32px;
+	right: 32px;
+}
+
 .card-description {
 	border: 1px solid var(--accent);
 	padding: 32px 16px;
 	border-top: 0;
 }
-.card > div > p {
+.card-text {
 	color: var(--text);
 }
