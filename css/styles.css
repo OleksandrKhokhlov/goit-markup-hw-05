@@ -118,6 +118,8 @@ img {
 	color: var(--dark);
 	padding: var(--header-padding);
 	display: block;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-nav:hover,
 .link-nav:focus {
@@ -145,6 +147,8 @@ img {
 	color: var(--text);
 	display: block;
 	padding: var(--header-padding);
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -179,8 +183,7 @@ img {
 	font-weight: 500;
 	letter-spacing: 0.04em;
 	color: var(--background-color-primary);
-	background: #4d5ae5;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	background-color: var(--primary-brand);
 	border-radius: 4px;
 	border-color: transparent;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -188,6 +191,8 @@ img {
 	display: inline-block;
 	padding: 16px 32px;
 	min-width: 169px;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -277,6 +282,8 @@ img {
 	align-items: center;
 	background-color: var(--primary-brand);
 	border-radius: 50%;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus {
@@ -301,6 +308,8 @@ img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-tumb:focus,
 .customers-tumb:hover {
@@ -353,6 +362,8 @@ img {
 	justify-content: center;
 	align-items: center;
 	background-color: rgba(255, 255, 255, 0.1);
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -379,6 +390,9 @@ img {
 	cursor: pointer;
 	display: inline-block;
 	padding: 12px 24px;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filtr-btn:hover,
 .filtr-btn:focus {
@@ -407,6 +421,8 @@ img {
 }
 .card {
 	display: block;
+
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card:focus,
 .card:hover {
