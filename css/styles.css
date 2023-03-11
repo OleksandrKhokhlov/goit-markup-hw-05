@@ -507,10 +507,15 @@ img {
 .modal-btn {
 	margin-top: 24px;
 	margin-right: 24px;
-	color: var(--dark);
+	fill: var(--dark);
 	background-color: var(--accent);
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn:hover, .modal-btn:focus {
+	fill: var(--background-color-primary);
+	background-color: var(--pressed-state);
 }
 .backdrop.is-hidden {
 	opacity: 0;
