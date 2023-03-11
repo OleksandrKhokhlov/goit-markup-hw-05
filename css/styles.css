@@ -359,12 +359,7 @@ img {
 	gap: 16px;
 }
 .footer-social-link {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	background-color: rgba(255, 255, 255, 0.1);
-
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -450,10 +445,10 @@ img {
 	top: 0;
 	left: 0;
 }
-.card-thumb:hover::before,
-.card-tumb:focus::before,
-.card-thumb:hover .card-overlay,
-.card-thumb:hover .card-overlay {
+.card:hover .card-thumb::before,
+.card:focus .card-tumb::before,
+.card:hover .card-overlay,
+.card:focus .card-overlay {
 	opacity: 1;
 	transform: translateY(0);
 }
@@ -500,24 +495,26 @@ img {
 	background-color: var(--modal-bcg-color);
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
-	display: flex;
-	justify-content: right;
-	align-items: start;
 }
 .modal-btn {
-	display: block;
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding: 0;
-	width: 24px; 
+	width: 24px;
 	height: 24px;
-	margin-top: 24px;
-	margin-right: 24px;
 	fill: var(--dark);
 	background-color: var(--accent);
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
+	cursor: pointer;
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-btn:hover, .modal-btn:focus {
+.modal-btn:hover,
+.modal-btn:focus {
 	fill: var(--background-color-primary);
 	background-color: var(--pressed-state);
 }
@@ -525,4 +522,5 @@ img {
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
+	transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
